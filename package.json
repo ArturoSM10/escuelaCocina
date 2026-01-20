@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "http://git@github.com:ArturoSM10/escuelaCocina.git#readme",
+  "bugs": {
+    "url": "http://git@github.com:ArturoSM10/escuelaCocina.git/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ArturoSM10/escuelaCocina.git"
+    "url": "git+http://git@github.com:ArturoSM10/escuelaCocina.git"
   },
   "license": "ISC",
   "author": "Arturo Mendoza",
