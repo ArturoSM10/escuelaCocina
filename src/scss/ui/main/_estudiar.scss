@@ -1,0 +1,35 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.estudiar {
+    padding-bottom: 5rem;
+    &__titulo {
+        text-align: center;
+
+        &::after {
+            @include m.titulo;
+        }
+    }
+
+    &__cards {
+        margin-top: 5rem;
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__img {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-weight: 300;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    &__p {
+        text-align: center;
+    }
+}
