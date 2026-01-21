@@ -1,0 +1,86 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.avif .bloque-info__img--izq {
+    background-image: url('../img/bloque_1.avif');
+}
+.noavif.webp .bloque-info__img--izq {
+    background-image: url('../img/bloque_1.webp');
+}
+.noavif.nowebp .bloque-info__img--izq {
+    background-image: url('../img/bloque_1.jpg');
+}
+
+.avif .bloque-info__img--der {
+    background-image: url('../img/bloque_2.avif');
+}
+.noavif.webp .bloque-info__img--der {
+    background-image: url('../img/bloque_2.webp');
+}
+.noavif.nowebp .bloque-info__img--der {
+    background-image: url('../img/bloque_2.jpg');
+}
+
+
+
+.hero {
+    margin-top: 5rem;
+    @include m.grid(1, 0);
+
+    @include m.tablet {
+        @include m.grid(2, 0);
+    }
+}
+
+.bloque-info {
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__contenido {
+        max-width: 60rem;
+        padding: 5rem;
+    }
+
+    &__border {
+        max-width: 40rem;
+        border-block: 1px solid v.$blanco;
+    }
+
+    &--rosa {
+        background-color: v.$primario;
+        @include m.tablet {
+            justify-content: flex-end;
+        }
+    }
+
+    &--verde {
+        background-color: v.$secundario;
+        @include m.tablet {
+            grid-column: 2/3;
+            justify-content: flex-start;
+        }
+    }
+
+    &__titulo,
+    &__p {
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+
+    &__img--der {
+        @include m.tablet {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+
+}

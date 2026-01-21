@@ -13,6 +13,7 @@
 
     &__contenedor {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
         @include m.tablet {
