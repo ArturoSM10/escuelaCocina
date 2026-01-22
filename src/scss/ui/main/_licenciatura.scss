@@ -1,0 +1,51 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.avif .licenciatura {
+    background-image: url('../img/chef_bg.avif');
+}
+
+.noavif.webp .licenciatura {
+    background-image: url('../img/chef_bg.webp');
+}
+
+.noavif.nowebp .licenciatura {
+    background-image: url('../img/chef_bg.jpg');
+}
+
+.licenciatura {
+    height: 65rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    text-align: center;
+
+    &__titulo {
+        color: v.$blanco;
+        text-align: center;
+        font-weight: 700;
+        margin: 2rem 0 0;
+    }
+
+    &__p {
+        color: v.$blanco;
+        font-size: 2.6rem;
+        max-width: 50rem;
+        margin: 2rem 0;
+    }
+
+    &__btn {
+        @include m.boton(v.$primario, v.$blanco, capitalize);
+        width: fit-content;
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+        margin-top: 0rem;
+    }
+}
